@@ -22,7 +22,7 @@ async function onSubmit () {
   isDataSent.value = false;
   requestSending.value = !requestSending.value
   // do not check the session is valid.
-  const resp = await fetch('https://api.impart.icu/api/',{method:'post',body:JSON.stringify(formInline)})
+  const resp = await fetch('https://sample.lemonkoi.one/api/',{method:'post',body:JSON.stringify(formInline)})
   if (resp.ok) {
     const data : replyFormat = await resp.json()
     hash = data.token;
@@ -43,11 +43,11 @@ const isDataSent = ref(false)
 const requestSending = ref(false)
 
 function linkToBook() {
-  window.location.href = "https://moe.himoyo.cn/archives/14/"
+  window.location.href = "https://lemonkoi.one/archives/14/"
 }
 
 function linkToIntro() {
-  window.location.href = "https://lucy.impart.icu"
+  window.location.href = "https://lucy.lemonkoi.one"
 }
 
 
@@ -69,7 +69,7 @@ function linkToIntro() {
       <br>使用此绑定页面可以将 Session 进行加密，通过此加密页面可以不通过直接发送原Session的的情况下传入Lucy.
       <br>
       <br>在这边填入你的相关信息，将账户进行绑定，绑定后将会返回一串校验码,请使用校验码进行绑定<br>
-      <br>关于获取Session的方法 ：<a href="https://moe.himoyo.cn/archives/113/">Phigros Session 获取方法</a>
+      <br>关于获取Session的方法 ：<a href="https://lemonkoi.one/archives/113/">Phigros Session 获取方法</a>
     </div>
     <div class="form-path">
       <form>
